@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cors =require('cors');
+const cors = require('cors');
 require("dotenv").config();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const port = process.env.PORT || 5000;
@@ -27,7 +27,7 @@ async function run(){
 
         // data
 
-        app.get('/sevices',async(req,res)=>{
+        app.get('/services',async(req,res)=>{
             const query ={};
             const cursor =laptopCollection.find(query)
             const services = await cursor.toArray()
